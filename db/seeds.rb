@@ -12,9 +12,16 @@ categories = Category.create([
 # randomly assign one of the categories above to each article
 for i in 0..49
 	title = Faker::Lorem.sentence(rand(2..10)).chomp('.')
-	content = Faker::Lorem.paragraph(word_count=250)
+	content = Faker::Lorem.paragraph(paragraph_count=(rand(2..8))) #changed word count to paragraph count 10 to avoid super long strings.
 
-	# randomly assign one of the categories we just created 
-	category = Category.first(offset: rand(Category.count)) 
+	# randomly assign one of the categories we just created
+	# The 'sample' method selects a random item from a collection.
+	category = Category.all.sample 
+
+	# debugging code
+	# title_length = title.length
+	# content_length = content.length
+	# puts "#{title_length}  #{content_length}"
+
 	a = Article.create(title: title, content: content, categories: [category,])
 end
