@@ -1,2 +1,16 @@
 <h1>Wikiful</h1>
-<p>This is a placeholder for our landing page. Eventually interesting things will happen here!</p>
+
+<h3>Welcome to Wikiful!</h3>
+
+<p>Check out the latest articles:</p>
+<% @articles.each do |article| %>
+  <div>
+    <strong><%= article.title %></strong> (Published on <%= article.created_at.strftime('%b %d, %Y') %>)<br>
+    Filed under: 
+    <% article.categories.each do |category| %>
+      <%= category.name %> 
+    <% end %>
+	| <%= article.content[0..100] %><br>
+    </div> <br>
+
+<% end %>
