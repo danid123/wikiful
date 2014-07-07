@@ -5,5 +5,11 @@
   <%= @category.name %>
 </p>
 
+<strong>Articles: </strong>
+
+	<br> <% @articles.each do |article| %>
+	<a href = "http://localhost:3000/articles/<%=article.id%>"><%= article.title %> </a> <br>
+	<% end %>
+<br>
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
