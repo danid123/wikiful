@@ -8,7 +8,7 @@
 <strong>Articles: </strong>
 
 	<br> <% @articles.each do |article| %>
-	<a href = "http://localhost:3000/articles/<%=article.id%>"><%= article.title %></a> <br>
+	<a href = "/articles/<%=article.id%>"><%= article.title %></a> <br>
 	<% end %>
 <br>
 <%= link_to 'Edit', edit_category_path(@category) %> |

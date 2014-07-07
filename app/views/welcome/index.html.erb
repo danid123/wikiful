@@ -10,7 +10,7 @@
     <% article.categories.each do |category| %>
       <%= category.name %> 
     <% end %>
-	| <%= article.content[0..100] %><br>
+	| <%= article.content[0..100] %> <a href = "/articles/<%=article.id%>">more</a><br>
     </div> <br>
 
 <% end %>
