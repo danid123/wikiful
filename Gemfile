@@ -41,3 +41,7 @@ gem 'spring',        group: :development
 # Fake data generator
 gem 'faker'
 
+# Add Bootstrap for styling 
+gem 'twitter-bootstrap-rails'
+gem 'less-rails'
+gem 'therubyracer'
