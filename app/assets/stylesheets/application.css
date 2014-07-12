@@ -41,6 +41,9 @@ a:hover, a:focus, a:active {
     background-color: inherit;
 }
 
-h1, h3{
+h4{
+	color: #8CC8D9;
+}
+h1, h3 {
 	color: #6092A6;
 }
